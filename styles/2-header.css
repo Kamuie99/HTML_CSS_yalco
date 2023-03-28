@@ -1,3 +1,22 @@
+/* ===== 헤더 배치 ===== */
+
+.header {
+  display: flex;
+  position: sticky;
+
+  /* 스크롤업되는 컨텐츠 위로 올라오도록 */
+  z-index: 2;
+
+  top: 0;
+  height: var(--height-toolbar);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-main);
+
+  color: white;
+}
+
+
 @media (max-width: 768px) {
 }
 
