@@ -45,8 +45,40 @@
 
 /* ===== 모바일 ===== */
 @media (max-width: 768px) {
-  .header__nav{
+  .header__nav {
     display: none;
+  }
+  .header__menu-btn {
+    all: unset;
+    display: block;
+    width: var(--height-toolbar);
+    height: var(--height-toolbar);
+    background-image: url(../images/menu-button.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .header__menu-btn:checked {
+    background-color: var(--color-dark);
+  }
+  .header__menu-btn:checked + .header__nav {
+    display: inherit;
+    position: absolute;
+    top: var(--height-toolbar);
+    right: 0;
+    background-color: var(--color-dark);
+    padding-bottom: 1em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .header__nav-item {
+    width: 100vw;
+    text-align: center;
+  }
+  .header__nav-item a {
+    width: 100vw;
+  }
+  .header__nav-item:not(:last-child) {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -76,5 +108,8 @@
     left: 0;
     width: 100%;
     height: 8px;
+  }
+  .header__menu-btn {
+    display: none;
   }
 }
