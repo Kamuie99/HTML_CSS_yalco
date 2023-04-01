@@ -1,5 +1,66 @@
-@media (max-width: 768px) {
+#about {
+  background-color: var(--color-light-bg);
 }
 
+.about {
+  display: inline-flex;
+  gap: 1em;
+  margin-top: 48px;
+}
+
+.about__card {
+  padding: 48px;
+  text-align: center;
+  color: white;
+  background-color: var(--color-dark);
+  border-radius: 12px;
+}
+
+.about__icon {
+  width: 120px;
+  opacity: 0.25;
+}
+
+.about__title {
+  margin-top: 0.6em;
+  font-size: var(--font-size-larger);
+  font-weight: bold;
+}
+
+.about__title._1 {
+  color: #FFB974;
+}
+
+.about__title._2 {
+  color: #6BB0F3;
+}
+
+.about__title._3 {
+  color: #FFBDCE;
+}
+
+.about__text {
+  margin-top: 0.8em;
+  font-size: var(--font-size-text);
+}
+
+/* ===== 모바일 설정 ===== */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+
+/* ===== 데스크톱 설정 ===== */
 @media (min-width: 769px) {
+  #about {
+    grid-column: 1 / -1;
+  }
+  .about__card {
+    width: 320px;
+    cursor: pointer;
+    transition: all 350ms;
+  }
 }
